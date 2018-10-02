@@ -1,1 +1,11 @@
 311_Service_Requests_from_2010_to_Present.csv
+2017_data.csv
+2010_Census_Population_By_Zipcode.csv
+.ipynb_checkpoints/
+deploy/.terraform/
+deploy/*.tfvars
+deploy/*.tfstate
+deploy/*.tfstate.backup
+deploy/output.json
+deploy/aws_terraform
+deploy/aws_terraform.pub
