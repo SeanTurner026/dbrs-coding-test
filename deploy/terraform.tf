@@ -69,7 +69,6 @@ resource "aws_security_group" "jupyter-server-security-group" {
 resource "aws_key_pair" "sean-key" {
     key_name   = "sean-key"
     public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIypZD01LV89GUQ6zSwAg6lq9XyD3ZS2CR5nWkS0vsel187Zu4tqFt4cO7f0mY9bTUrwRGEAhoxBIWMIYok8/ibZLeyZ7pMQei4z6xf0QhfkWdcMFPiZZJiz/W+u7XawayK1T76l9xWM0Q1vsWRk/pjCtDNBiFE7isbpDBSXXsJ6cQ7DW8YSKsykt7trl+ZmkTvA9g9EFfYOGtpEeoIBkXbi8twO6K9TkbgMkLebk9xupmmX4UM8fsEReGMFAWisbloDw4URRotn/XqW6m+vSCS7q/JAfUfsGcebOZNXBW7uYONgc45jznnY5ymZQ4iHo+VcJs+zjGzXvVDy73kTIX aws_terraform_ssh_key"
-
     depends_on = [
         "aws_iam_policy_attachment.ec2-full-access-policy-attach"
     ]
