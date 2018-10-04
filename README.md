@@ -8,13 +8,27 @@ Create a file called `terraform.tfvars`. Save this file in `dbrs-coding-test/dep
 access_key = "your-aws-access-key"
 secret_key = "your-aws-secret-key"
 ```
-An SSH key must also be created and placed in the `dbrs-coding-test/deploy` directory. This can be accomplished with the following command:
+An ssh key must also be created and placed in the `dbrs-coding-test/deploy` directory. This can be accomplished with the following command:
 
 ```
 $ ssh-keygen -q -f aws_terraform -C aws_terraform_ssh_key -N ''
 ```
 
-Given the creation of the ssh key pair, and `terraform.tfvars`, the following commands will bring the EC2 Instance online and launch the Jupyter Server.
+The contents of the ssh public key must also be place inside `terraform.tf`. Copy the contents revealed by the below command, and paste in __line 71__.
+
+```
+$ cat aws_terraform.pub
+```
+
+The user in `terraform.tf` on __line 14__ must also be changed. Add in your own user name
+
+```
+    users = [
+        "your-aws-username"
+    ]
+```
+
+Given that all of the above was completed, the following commands will bring the EC2 Instance online and launch the Jupyter Server.
 
 ``` bash
 $ cd deploy
